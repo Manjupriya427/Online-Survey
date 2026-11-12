@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Routes, Route, Link, useNavigate } from "react-router-dom";
 
-const API = "http://localhost:5000/api";
+const API = `${(import.meta.env.VITE_API_URL || "http://localhost:5000").replace(/\/$/, "")}/api`;
 
 const initialForm = {
   name: "",
