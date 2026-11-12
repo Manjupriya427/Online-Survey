@@ -8,7 +8,9 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-
+app.get("/", (req, res) => {
+    res.send("Online Survey Backend is running successfully!");
+});
 const feedbackSchema = new mongoose.Schema({
     name: {
         type: String,
